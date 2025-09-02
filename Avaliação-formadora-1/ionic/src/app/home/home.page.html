@@ -1,16 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Cartão De Identificação
+      Cartão de Identificação
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="padding">
-    <h2>João Giffoni</h2>
-    <p>Matricula: 24101738</p>
+<ion-content class="ion-padding">
 
-    <img src="assets/foto-de-perfil.jpg" alt="Foto de perfil" style="width: 200px; border-radius: 12px;">
-    
-    <ion-button expand="block" routerLink="/sobre">Sobre mim</ion-button>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>João Giffoni</ion-card-title>
+      <ion-card-subtitle>Matrícula: 24101738</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content style="text-align: center;">
+      <img src="assets/foto-de-perfil.jpg" 
+           alt="Foto de perfil" 
+           style="width: 200px; border-radius: 30%; margin-bottom: 16px;">
+
+      <ion-button expand="block" routerLink="/sobre">
+        Sobre mim
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
