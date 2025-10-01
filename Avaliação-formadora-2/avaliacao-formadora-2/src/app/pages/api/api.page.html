@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PokeAPI</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+
+  <div class="ion-text-center ion-margin-top" *ngIf="carregando">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Capturando Pokémon...</p>
+  </div>
+
+  <div *ngIf="pokemon && !carregando">
+    <div class="evolution-display">
+
+      <div class="pokemon-container">
+        <img [src]="pokemon.sprites.front_default" alt="Imagem do Pokémon" />
+        <ion-label class="ion-text-capitalize">{{ pokemon.name }}</ion-label>
+      </div>
+
+      <div *ngIf="evolution" class="evolution-container">
+        <ion-icon name="arrow-forward-outline" class="evolution-arrow"></ion-icon>
+        <div class="pokemon-container">
+          <img [src]="evolution.sprites.front_default" alt="Imagem da Evolução" />
+          <ion-label class="ion-text-capitalize">{{ evolution.name }}</ion-label>
+        </div>
+      </div>
+      
+    </div>
+
+    <div *ngIf="!evolution" class="ion-text-center ion-margin-top">
+      <ion-text color="medium">
+        <p>Este Pokémon não possui uma evolução.</p>
+      </ion-text>
+    </div>
+  </div>
+
+  <ion-button expand="block" (click)="buscarPokemon()" class="ion-margin-top">
+    Capturar Outro Pokémon!
+    <ion-icon slot="end" name="refresh"></ion-icon>
+  </ion-button>
+
+</ion-content>

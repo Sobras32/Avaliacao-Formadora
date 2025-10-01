@@ -1,0 +1,35 @@
+.evolution-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.pokemon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pokemon-container img {
+  image-rendering: pixelated;
+  width: 120px;
+  height: 120px;
+}
+
+.evolution-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.evolution-arrow {
+  font-size: 2.5rem;
+  color: var(--ion-color-medium-shade);
+}
+
+.ion-text-capitalize {
+  font-weight: bold;
+}
